@@ -1,0 +1,23 @@
+class Player:
+
+    # Attributes for the player
+    # Name: The players name
+    # Inventory: The items that the player gathers during their quest
+
+
+    # Create the class
+    def __init__(self, name):
+        self.name = name
+        self.inventory = []
+
+    # Add item to inventory method
+    def addInventory(self, item):
+        self.inventory.append(item)
+        # print(self.inventory)
+
+    # Create the player save string
+    def savePlayer(self):
+        saveString = self.name + "|"
+        inventoryString = ','.join(self.inventory)
+        playerSave = saveString + inventoryString
+        return playerSave
