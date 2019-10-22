@@ -6,6 +6,9 @@ import platform
 sys.path.append('assets/')
 from player import Player
 
+# Global variables
+interfacePath = ""
+
 # Clear the screen so that the content stays at the top of the terminal
 def clearScreen(system):
     if system == "Windows":
@@ -13,17 +16,28 @@ def clearScreen(system):
     else:
         os.system('clear')
 
+
+def interfacePath(systemName):
+    if systemName == "Windows":
+        return "assets\\interface\\"
+    else:
+        return "assets/interface/"
+
 # Set the system so the game knows how to clear the terminal screeni
 systemName = platform.system()
 
+clearScreen(systemName)
 
-def printWelcome():
-    with open('assets\interface\welcome_menu.txt', 'r') as f:
+welcomePath = interfacePath(systemName) + "welcome_menu.txt"
+print(welcomePath)
+
+def printWelcome(welcomePath):
+    with open(welcomePath, 'r') as f:
         for line in f:
             print(line.rstrip())
 
-clearScreen(systemName)
-printWelcome()
+
+printWelcome(welcomePath)
 
 
 # The below lines are for testing creating the player object.
