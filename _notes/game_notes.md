@@ -7,5 +7,5 @@ This is my first adventure text based game.
 - [ ] Find an actual name for the game
 - [ ] Build start screen
 - [ ] Build a way to save the game
-- [ ] Find a way to change the file path based on os
+- [x] Find a way to change the file path based on os
 ---
