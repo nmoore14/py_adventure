@@ -23,6 +23,23 @@ def interfacePath(systemName):
     else:
         return "assets/interface/"
 
+# Menu functions
+def createNewGame():
+    # Create a new game
+
+def loadGame():
+    # Load an existing game
+
+def viewEditGames():
+    # View all of the players games that they have saved.
+
+def hack():
+    # Load text files for the user to "hack" their current game
+    # Figure out how I want to implement this£™£
+
+def exitGame():
+
+
 # Set the system so the game knows how to clear the terminal screeni
 systemName = platform.system()
 
@@ -38,6 +55,12 @@ def printWelcome(welcomePath):
 
 
 printWelcome(welcomePath)
+
+# Building the menu select
+menu_choices = ["N", "L", "V", "H", "E"]
+menu_selection = raw_input("Menu Choice: ")
+
+
 
 
 # The below lines are for testing creating the player object.
